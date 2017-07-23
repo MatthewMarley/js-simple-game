@@ -30,9 +30,25 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+# Bootstrap for Sass gem, used for front-end UI and layout
+gem 'bootstrap-sass', '~> 3.3.7'
+
+# Use FontAwesome Sass gem for adding icons
+gem 'font-awesome-sass', '~> 4.7.0'
+
+# Use Hirb gem for 
+gem 'hirb', '~> 0.7.3'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
+  # Use sqlite3 as the database for Active Record
+  gem 'sqlite3'
+end
+
+group :production do
+  # Use the PostgreSQL gem for Heroku production servers
+  gem 'pg', '0.18.4'
 end
 
 group :development do
